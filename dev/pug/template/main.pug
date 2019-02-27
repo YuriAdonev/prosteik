@@ -1,0 +1,35 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+
+	body(class=pageClass)
+		//include ../modules/preloader
+		//include ../modules/cache
+		
+		include ../modules/header/header
+		
+		include ../sections/main-slider
+		main.main-content
+			include ../sections/main-productions
+			include ../sections/main-products
+			include ../sections/main-cooperation
+			include ../sections/main-blog
+			block content
+			
+		include ../modules/footer/footer
+		
+		script(src="js/jquery-3.3.1.min.js")
+		script(src="js/libs.min.js")
+		script(src="js/main.js")
+		block script

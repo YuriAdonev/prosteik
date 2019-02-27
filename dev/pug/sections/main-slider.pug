@@ -1,0 +1,22 @@
+mixin sliderItems(sliderItemsTitle, sliderItemsText, sliderItemsImage, sliderItemsBtn, sliderItemsBtnLink)
+	.swiper-slide.main-slider__item
+		.slide-inner
+			.main-slider__bg(style=sliderItemsImage)
+			.main-slider__content
+				.main-slider__decoration
+					img(src="img/quotes.svg" alt="")
+				.main-slider__title= sliderItemsTitle
+				.main-slider__decoration.long
+					img(src="img/quotes.svg" alt="")
+				.main-slider__text= sliderItemsText
+				.btn__wrap.main-slider__btn-wrap
+					a.btn.main-slider__btn(href=sliderItemsBtnLink)= sliderItemsBtn
+
+section.swiper-container.main-slider
+	.swiper-wrapper
+		+sliderItems('Крупнейший производитель мясной продукции в Северо-Западном Федеральном Округе', 'ООО “Рощинский мясокомбинат”', 'background-image: url(img/main.jpg);', 'Узнать больше', '#')
+		+sliderItems('Крупнейший производитель мясной продукции в Северо-Западном Федеральном Округе', 'ООО “Рощинский мясокомбинат”', 'background-image: url(img/main.jpg);', 'Узнать больше', '#')
+		+sliderItems('Крупнейший производитель мясной продукции в Северо-Западном Федеральном Округе', 'ООО “Рощинский мясокомбинат”', 'background-image: url(img/main.jpg);', 'Узнать больше', '#')
+		+sliderItems('Крупнейший производитель мясной продукции в Северо-Западном Федеральном Округе', 'ООО “Рощинский мясокомбинат”', 'background-image: url(img/main.jpg);', 'Узнать больше', '#')
+	.swiper-button-next.swiper-button-white
+	.swiper-button-prev.swiper-button-white

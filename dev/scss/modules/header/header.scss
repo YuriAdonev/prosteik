@@ -1,0 +1,132 @@
+.main-header {
+	position: fixed;
+	top: 0;
+  left: 0;
+	right: 0;
+	height: 82px;
+	z-index: 100;
+	&__wrap {
+		position: relative;
+    padding: 10px 0 10px;
+		margin: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+		box-sizing: content-box;
+	}
+	&__logo {
+		position: relative;
+    top: 0;
+		height: 36px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+		outline: none;
+		transition: opacity 0.3s linear;
+		img {
+			display: block;
+			width: auto;
+		}
+		img:nth-child(1) {
+			height: 100%;
+			margin-right: 15px;
+		}
+		img:nth-child(2) {
+			height: 20px;
+		}
+		&:hover,
+		&:focus {
+			opacity: 0.7;
+		}
+	}
+}
+
+.main-nav {
+	padding-top: 8px;
+	&__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+	&__item:not(:last-child) {
+		position: relative;
+    margin-right: 40px;
+	}
+	&__item:last-child {
+		.main-nav__link::after {
+			display: none;
+		}
+	}
+	&__link {
+		display: block;
+		position: relative;
+		color: #fff;
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		font-family: "RalewaySemiBold", Arial, sans-serif;
+		transition: all .3s linear;
+		&:hover,
+		&:focus {
+			color: $accent;
+			&::after,
+			&.active::after {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: -30px;
+				left: 0;
+				height: 2px;
+				width: 100%;
+				background-color: #af0827;
+				transition: all 0.3s linear;
+			}
+		}
+	}
+}
+
+.hamburger {
+	cursor: pointer;
+	position: relative;
+	top: 4px;
+	right: 15px;
+	&:hover,
+	&:focus {
+		span:nth-child(1) {
+			top: 15px;
+		}
+		span:nth-child(3) {
+			top: 41px;
+		}
+	}
+	&__wrap {
+		position: relative;
+		padding: 15px;
+    width: 36px;
+    height: 26px;
+		background: rgba(255,255,255,0.1);
+		box-sizing: content-box;
+	}
+	span {
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: #fff;
+    transition: all 0.35s;
+    position: absolute;
+    right: 15px;
+	}
+	span:nth-child(1) {
+    top: 18px;
+	}
+	span:nth-child(2) {
+    top: 28px;
+    opacity: 1;
+    transition: opacity 0.35s;
+		transition: background 0.35s;
+	}
+	span:nth-child(3) {
+    top: 38px;
+	}
+}

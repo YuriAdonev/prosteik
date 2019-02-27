@@ -1,0 +1,21 @@
+mixin mainBlogItem(mainBlogItemImage, mainBlogItemDate, mainBlogItemLink, mainBlogItemTitle, mainBlogItemText)
+	a.main-blog__item(href=mainBlogItemLink)
+		.main-blog__preview
+			.main-blog__hover
+				span Узнать больше
+				.main-blog__img(style=mainBlogItemImage)
+			.main-blog__date
+				span= mainBlogItemDate
+		.main-blog__content
+			.main-blog__title= mainBlogItemTitle
+			.main-blog__text= mainBlogItemText
+
+section.main-blog
+	.container.main-blog__wrap
+		+sectionHeader('Блог', 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Повстречался, заглавных.')
+		.main-blog__list
+			+mainBlogItem('background-image: url(img/main.jpg);', '05 ноября 2018', 'post.html', 'Далеко-далеко за словесными горами в стране, гласных и согласных.', 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Грустный моей, города языком рукописи то.')
+			+mainBlogItem('background-image: url(img/main.jpg);', '05 ноября 2018', 'post.html', 'Далеко-далеко за словесными горами в стране, гласных и согласных.', 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Грустный моей, города языком рукописи то.')
+			+mainBlogItem('background-image: url(img/main.jpg);', '05 ноября 2018', 'post.html', 'Далеко-далеко за словесными горами в стране, гласных и согласных.', 'Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Грустный моей, города языком рукописи то.')
+		.btn__wrap.main-blog__btn-wrap
+			a.btn.main-blog__btn(href="#") Читать все новости
