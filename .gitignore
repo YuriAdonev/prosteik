@@ -1,4 +1,5 @@
-package-lock.json
 node_modules
 .idea
 build
+yarn.lock
+package-lock.json
