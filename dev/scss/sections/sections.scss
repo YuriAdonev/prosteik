@@ -3,3 +3,120 @@
 @import 'main-blog';
 @import 'main-cooperation';
 @import 'main-products';
+
+.section-header {
+	text-align: center;
+	margin: 0 auto 40px;
+	&__title {
+		font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "RalewayRegular", sans-serif;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+		overflow: hidden;
+		span {
+			display: block;
+			opacity: 0;
+			animation: title-anim-out .4s forwards linear;
+			&::after {
+				content: '';
+				display: block;
+				width: 70px;
+				height: 5px;
+				background-color: $accent;
+				margin: 12px auto 0;
+			}
+			&::before {
+				content: '';
+				display: block;
+			}
+		}
+	}
+	&__title-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $dark;
+		z-index: 3;
+		animation: title-bg-anim-out .4s forwards linear;
+	}
+	&__subtitle-wrap {
+		max-width: 540px;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		font-size: 16px;
+		line-height: 1.33;
+	}
+	&__subtitle {
+		transform: translateX(-100%);
+		transition: all .2s linear;
+	}
+	&.animated {
+		.section-header__title {
+			span {
+				opacity: 1;
+				animation: title-anim-in .8s forwards linear;
+			}
+		}
+		.section-header__title-bg {
+			animation: title-bg-anim-in .8s forwards linear;
+		}
+		.section-header__subtitle {
+			transform: translateX(0);
+			transition: all .5s linear;
+		}
+	}
+}
+@keyframes title-anim-in {
+	from {
+		transform: translateX(-100%);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+@keyframes title-anim-out {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	50% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+@keyframes title-bg-anim-in {
+	from {
+		transform: translateX(-100%);
+	}
+	50% {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(100%);
+	}
+}
+@keyframes title-bg-anim-out {
+	from {
+		transform: translateX(100%);
+	}
+	50% {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}

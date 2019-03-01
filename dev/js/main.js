@@ -44,4 +44,8 @@ $(document).ready(function () {
 
 	var swiperMain = new Swiper(".main-slider", swiperOptions);
 	
+	$(".section-header").animated();
+	$(".main-blog__list").animated();
+	$(".main-blog").animated();
+	
 });

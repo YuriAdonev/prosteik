@@ -8,6 +8,9 @@ mixin icon(name,mod)
 			
 mixin sectionHeader(sectionHeaderTitle, sectionHeaderSubtitle)
 	.section-header
-		.section-header__title= sectionHeaderTitle
-		.section-header__subtitle= sectionHeaderSubtitle
+		.section-header__title
+			.section-header__title-bg
+			span= sectionHeaderTitle
+		.section-header__subtitle-wrap
+			.section-header__subtitle= sectionHeaderSubtitle
 		
