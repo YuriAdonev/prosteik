@@ -1,3 +1,22 @@
 .main-products {
 	background-color: #fff;
+	&::before {
+		content: '';
+		display: block;
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		bottom: calc(100% - 3px);
+		left: 0;
+		z-index: 3;
+		background: linear-gradient(to top, rgba(#fff, 1) 50%, rgba(#fff, .7) 80%, rgba(#fff, .3) 90%, rgba(#fff, 0) 100%);
+		transition: .8s linear;
+	}
+	&.animated {
+		&::before {
+			opacity: 1;
+			height: 100vh;
+			transition: .8s linear;
+		}
+	}
 }

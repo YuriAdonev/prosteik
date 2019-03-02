@@ -5,6 +5,14 @@
 	right: 0;
 	height: 82px;
 	z-index: 100;
+	&__bg {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: $dark;
+	}
 	&__wrap {
 		position: relative;
     padding: 10px 0 10px;

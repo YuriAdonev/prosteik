@@ -10,15 +10,15 @@
 		position: absolute;
 		bottom: calc(100% - 3px);
 		left: 0;
-		opacity: 0;
-		background-image: linear-gradient(to top, rgba(#222, 1) 60%, rgba(#222, .7) 80%, rgba(#222, .3) 90%, rgba(#222, 0) 100%);
-		transition: all 1s linear;
+		z-index: 3;
+		background: linear-gradient(to top, rgba($dark, 1) 50%, rgba($dark, .6) 80%, rgba($dark, .3) 90%, rgba($dark, 0) 100%);
+		transition: .8s linear;
 	}
 	&.animated {
 		&::before {
 			opacity: 1;
 			height: 100vh;
-			transition: all 0.2s linear;
+			transition: .8s linear;
 		}
 	}
 	&__wrap {
@@ -28,10 +28,10 @@
 		margin-bottom: 56px;
 		display: flex;
 		justify-content: space-between;
+		overflow: hidden;
 		&.animated {
 			.main-blog__item {
 				transform: translateY(0);
-				
 			}
 			.main-blog__item:nth-child(1) {
 				transition: 0.5s linear;
